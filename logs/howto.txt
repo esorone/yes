@@ -1,0 +1,176 @@
+////////// Model maken
+
+model (genaamd Post)maken + direct de  migratie maken (deze is dus meervouding en wordt Posts genoemd)
+
+php artisan make:model Post --migration
+
+Past de migratie file aan en dan
+
+php artisan migrate
+
+/////////// Controller maken
+
+
+De -- resource maakt alvast de CRUD functies aan.
+Create, Read, Update of Destroy de Post
+
+
+php artisan make:controller postController
+of php artisan make:controller postController --resource 
+
+
+/////////// Test of de routes werken:
+php artisan route:list
+
+
+/////////// FORM default helpers voor BLADE incl crfs etc ******* DOEN  ********
+Ga naar https://laravelcollective.com/docs/5.2/html
+voeg toe in Json
+
+    "laravelcollective/html": "5.2.*"
+en dan composer update
+
+daarna voeg Collective\Html\HtmlServiceProvider::class, toe aan de App\config onder providers
+
+maar daarna een alias ook in App\config\app.php 
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+
+
+
+///////////// java validatie
+http://parsleyjs.org
+
+///////////// Nieuwe toevoegingen stappenplan:
+
+1: Check of je een nieuwe tabel /  columnnodig hebt in de db
+2: Ga terug naar je post CRUD of alles nog klopt omdat je een nieuwe tabel  hebt. / column
+3: Pas je route aan(indien nodig)
+
+uitvoering:
+1: php artisan make:migration add_slug_to_posts
+2: Ga naar de migratiefile add_slug_to_posts en pas de  up en down aan zie Larvel docs. Let op daar staat
+ook dat je bijvoorbeeld json moet aanpassen
+3: php artisan migrate  (bij fout dan kun je php artisan migrate:rollback doen)
+4: Pas de juiste controler aan. aangezien we in de voorbeeld een slug maken (posts.create) passen we de post conroller aan
+bv de store functie en de create view
+5: Eventueel nog de route.php aanpassen omdat SLUG een onderdeel van de url
+
+
+LETOP: als je een colomn indexeert moet eerste de hele db leeg zijn, anders krijg je een error melding.
+Zonder index hoeft dat niet. Want de index mag niet leeg zijn.
+
+// nieuw veld
+Just add the fields with html, then make a migration and add more columns in your database,
+then in user.php model you need to add the new fields to the $fillable array and you are set :)﻿
+
+// AUTORISATIE CHECKS
+     * AUTORISATIE CHECKS:
+     * Andere optie is public function guest() of public function check() <- iedereen die is ingelogd,
+     * public function user(), public function id() <- is id van user
+     * public function viaRemember() <- is nogmaals vragen van de gegevens en niet te basseren op een Session. EXTRA VEILIG
+
+        {{--//check of user is ingelogd of niet  true or false--}}
+        {{ Auth::check() ? "Ingelogd" : "Uitgelogd" }}
+
+
+//// Toevoegen van relationele database:
+
+
+
+
+15:30 - php artisan make:model Category
+16:50 - php artisan make:migration create_categories_table --create=categories <- de --create=categories maakt standaard als een paar tabellen aan
+19:17 - edit migration file
+20:23 - php artisan make:migration add_category_id_to_posts --table=posts
+21:23 - edit migration file
+29:03 - $table->dropColumn( 'category_id' );
+29:13 - php artisan migrate
+
+With all of this in place we just need to connect the two models together. Set the category model to hasMany() with the posts model. Then to inverse it, we set the post model to belongsTo() the category model.
+
+31:15 - edit Category model
+35:18 - edit Post model
+37:26 - edit Categories table
+38:50 - edit Posts table
+39:48 - edit Single Blog view﻿
+
+
+//// CRUD voor categorie
+STEPS:
+4:54 - php artisan make:controller CategorieController --resource
+7:19 - edit CategorieController {
+---- 8:09 - index action edit
+---- 21:32 - add Categorie namespace
+---- 27:05 - store action edit
+---- 30:21 - add Session namespace
+}
+10:03 - add routes
+14:45 - add categories li item
+15:59 - create categories folder {
+---- 16:00 - create index.blade.php
+}﻿
+
+////Categorieen aan een post koppelen
+PostController {
+---- 7:55 - create action edit (in de post controller dus caegorienen selecteren)
+---- 8:48 - use App\Category
+---- 20:11 - store action edit
+---- 26:15 - "edit" action edit
+---- 30:12 - add categories array for select input
+---- 35:36 - update action edit
+}
+views/posts {
+---- 9:44 - create.blade view edit
+---- 24:45 - show.blade view edit
+---- 30:00 - add categories array to edit.blade view
+
+/// Mail versturen:
+STEPS:
+7:50 - route edit
+8:42 - PagesController edit {
+---- 13:00 - postContact action edit
+---- 31:47 - add Mail namespace
+---- 33:02 - add Session
+}
+10:55 - contact view edit
+19:39 - create emails folder
+20:18 - create contact.blade {
+---- 25:07 - edit contact.blade
+}
+29:54 - add csrf_field﻿
+
+////////   Comments toevoegen aan een post
+
+5:00 - php artisan make:model Comment --migration
+6:20 - migration edit
+13:45 - php artisan migrate
+14:32 - postModel edit
+15:01 - commentModel edit
+15:30 - php artisan make:controller CommentsController --resource
+17:52 - route edit
+22:08 - blog/single edit
+30:53 - commentsController edit
+40:46 - add comment block﻿
+
+
+///// managen van de comments:
+TEPS:
+4:25 - posts/show edit
+10:37 - routes edit
+12:35 - add comments.edit
+12:56 - commentsController edit {
+---- 12:57 - edit action edit
+---- 20:16 - update action edit
+---- 26:16 - add delete action
+---- 30:25 - destroy action  edit
+---- 37:00 - security add
+}
+13:45 - create comments folder {
+---- 13:47 - create edit view
+---- 27:00 - create delete view
+}
+25:47 - add route﻿
+
+
+
