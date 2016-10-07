@@ -172,5 +172,10 @@ TEPS:
 }
 25:47 - add route﻿
 
+/////////////
+
+Add to remote 
+git remote add production ssh://user@host.com/var/repo/site.git
+
 
 
