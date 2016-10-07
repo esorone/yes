@@ -10,8 +10,9 @@
           <div class="jumbotron">
             <h1>Yes ik ben aanwezig</h1>
             <p class="lead">Top dat jij er eindelijk ook eens bent. <br>Hieronder de aankomende activiteiten <br></p>
+            <div class="beta">
               <p class="label label-danger ">LET OP.. App is nog een beta en moet verder verfijnd worden</p>
-
+            </div>
           </div>
         </div>
       </div>

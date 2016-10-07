@@ -6,7 +6,7 @@
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <div class="panel panel-default">
+            <div class="panel panel-default form-spacing-top">
                 <div class="panel-heading">Reset wachtwoord</div>
                 <div class="panel-body">
                     {!! Form::open(['url' => 'password/reset', 'method' => "POST"]) !!}
