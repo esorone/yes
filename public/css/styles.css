@@ -137,6 +137,10 @@ label.btn.btn-primary.toggle-on {
     border: 1px solid #ae2423;
 }
 
+div.beta > p {
+    background-color: yellow;
+}
+
 
 
 .col-xs-12.btn_bottom {
