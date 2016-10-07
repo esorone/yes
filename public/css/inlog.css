@@ -11,6 +11,10 @@ body{
     text-align: center;
 }
 
+img{
+    width: 100%;
+}
+
 .footer_tekst {
     padding-top: 2em;
     padding-bottom: 2em;
