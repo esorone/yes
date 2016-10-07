@@ -1,0 +1,330 @@
+/*Body Background*/
+
+/*Kleurenpallet*/
+
+/*lichtgroen: #abb336*/
+/*donkergroen: #7d9138*/
+/*lighturguase: #57a6a1*/
+/*donkerturquase: #448e90*/
+/*lichtrood: #c73426*/
+/*donkerrood: #ae2423*/
+/*blauw: ae2423*/
+
+
+html{
+
+    /*background:url('../images/bg_groot.png') repeat center top #826e79;*/
+}
+body{
+    font:14px/1.3 'Segoe UI', 'Arial', sans-serif;
+    background-color:transparent !important;
+
+    background: url(../images/bg_groot.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.clndr-top {
+    background: #c73426;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+undefined
+.form-spacing-top {
+    margin-top: 2em;
+}
+
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+
+undefined
+undefined
+undefined
+.btn-primary {
+    background: #57a6a1;
+    border: none;
+    border-radius: 0;
+}
+.btn-primary:hover {
+    background: #448e90;
+}
+
+.btn_bottom {
+    position:absolute;
+    right:2em;
+    bottom: 1em;
+}
+
+undefined
+undefined
+undefined
+
+
+.col-xs-12.btn_bottom {
+    position: absolute;
+    right: 1em;
+    top: 9em;
+    z-index: 99;
+}
+
+
+undefined
+.box1 {
+    min-height: 7em;
+
+}
+
+.col-md-8.box1{
+
+}
+
+.row.marge_bottom {
+    margin-bottom: 3em;
+}
+
+undefined
+undefined
+
+undefined
+undefined
+.post_bg{
+    background-color: white;
+    padding: 1em 1em;
+}
+
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+
+.glyphicon {
+    position: relative;
+    /*top: 18px;*/
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+span.glyphicon {
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/** Comment */
+
+undefined
+undefined
+/***************     FLAT UI      **************/
+
+/*
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+h4, h5, h6,
+h1, h2, h3 {margin: 0;}
+ul, ol {margin: 0; padding:0;}
+p {margin: 0;}
+html, body{
+    font-family: 'Roboto-Regular';
+    font-size: 100%;
+    /*background: #483e52;*/
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(../fonts/Roboto-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf) format('truetype');
+}
+body a{
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+    text-decoration:none;
+}
+.row{
+    margin:0;
+}
+/*----*/
+undefined
+undefined/*--messages--*/
+undefined.box1{
+    padding:1em 0.9em;
+    background:#fff;
+    border-radius:0px;
+    box-shadow: 0px 3px 7px #888888;
+}
+undefined/*--keypad--*/
+undefined::-webkit-input-placeholder{
+    color:#c8c8c8!important;
+}
+undefined/*----*/
+undefined
+/*--graph--*/
+undefined/*--calender--*/
+undefined.clndr-top {
+    background-color: #c73426;
+    padding: 2em;
+}
+.clndr-top h3 {
+    color: #FFF;
+    font-size: 2em;
+    margin: 0;
+    letter-spacing: 2px;
+    font-family: 'Roboto-Regular';
+}
+undefined.events{
+    background: #e0e0e0;
+    padding: 1em 2em;
+    border-top:1px solid #b4b4b4;
+}
+.events h3{
+    color:#676767;
+    font-size:1.3em;
+}
+.events{
+    position:relative;
+}
+undefined/*--//calender--*/
+undefined/*--radio-btns--*/
+undefined/*----*/
+undefined/*----*/
+undefined/*----*/
+undefined/*----*/
+undefined/*----*/
+undefined/*----*/
+undefined/*----*/
+undefined/*----*/
+undefined/*----*/
+undefined/*--charts--*/
+undefined/*--timer--*/
+undefined/*-----*/
+undefined
+undefined/*--audio--*/
+undefined
+/*----*/
+undefined/*--responsive--*/
+
+@media (max-width: 1440px){
+undefined
+undefined}
+@media (max-width: 1366px){
+undefined
+undefined}
+@media (max-width: 1280px){
+undefined
+undefined    .clndr-top {
+        padding: 1.5em;
+    }
+    .clndr-top h3 {
+        font-size: 1.5em;
+    }
+undefined
+undefined}
+@media (max-width: 1200px){
+undefined}
+@media (max-width: 1080px){
+undefined
+undefined}
+@media (max-width: 1024px){
+undefined}
+@media(max-width: 991px){
+undefined
+undefined
+undefined}
+@media(max-width:800px){
+undefined
+undefined
+undefined}
+@media(max-width:768px){
+undefined
+undefined}
+@media (max-width:736px){
+undefined}
+@media (max-width:730px){
+undefined
+undefined}
+@media(max-width:667px){
+undefined}
+@media(max-width:640px){
+undefined
+undefined    .clndr-top {
+        padding: 1em;
+    }
+    .clndr-top h3 {
+        font-size: 1.4em;
+        letter-spacing: 1px;
+    }
+    .events {
+        padding: 1em 1em;
+    }
+    .events h3 {
+        font-size: 1.1em;
+    }
+undefined
+undefined}
+@media(max-width:600px){
+undefined}
+@media(max-width:568px){
+undefined}
+@media(max-width:480px){
+undefined
+undefined}
+@media(max-width:414px){
+undefined}
+@media (max-width: 384px){
+undefined}
+@media (max-width: 375px){
+undefined}
+@media(max-width:320px){
+undefined    .glyphicon {
+        left: -71px;
+    }
+undefined}
+
+/*************   Kalender    **************/
+
+
+undefined@media all and (max-width:1280px) {
+undefined}
+@media (max-width: 1200px){
+undefined}
+@media all and (max-width:1024px){
+undefined}
+@media (max-width: 991px){
+undefined}
+@media (max-width: 800px){
+undefined}
+@media all and (max-width:640px) {
+undefined}
+@media (max-width: 480px){
+undefined}
+@media all and (max-width:320px) {
+undefined}
