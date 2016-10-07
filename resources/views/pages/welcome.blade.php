@@ -48,7 +48,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div><br><hr>
         @endforeach
         <div class="col-md-3 col-md-offset-1" style="border-left: 1px dotted #6b6770 ">
           <h2>Hier komen de stats</h2>
