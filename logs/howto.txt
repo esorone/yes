@@ -176,6 +176,8 @@ TEPS:
 
 Add to remote 
 git remote add production ssh://user@host.com/var/repo/site.git
+git remote -v
+git push production master
 
 
 
