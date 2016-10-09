@@ -33,8 +33,8 @@
                                 <span class="text-muted">Laatste Update: {{ $comment->updated_at }}</span>
                                 <div class="text-right">
                                     @if ($comment->aanwezig === 1)
-                                        <p>AANWEZIG</p>
-                                    @else <span class="glyphicon glyphicon-remove"></span>
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    @else <p>Afwezig</p>
                                     @endif</div>
                             </div>
                             <div class="panel-body">
