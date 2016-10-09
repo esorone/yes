@@ -34,7 +34,7 @@
                                 <div class="text-right">
                                     @if ($comment->aanwezig = "1")
                                         <span class="glyphicon glyphicon-ok"></span>
-                                    @else <p>Afwezig</p>
+                                    @else <span class="glyphicon glyphicon-remove"></span>
                                     @endif</div>
                             </div>
                             <div class="panel-body">
