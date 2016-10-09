@@ -144,7 +144,7 @@ div.beta > p {
 .col-xs-12.btn_bottom {
     position: absolute;
     right: 1em;
-    bottom: 10em;
+    bottom: 0.2em;
     z-index: 99;
 }
 
