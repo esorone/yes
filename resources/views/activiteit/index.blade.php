@@ -37,7 +37,7 @@
                         <div class="col-md-2 col-sm-12 col-xs-12 btn_bottom">
                             <a href="{{ route('activiteit.single', $post->id) }}" class="btn btn-primary">Meer >>></a>
                         </div>
-                    </div>
+                      </div>
                     <div class="col-md-3 ">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12 clndr-top">

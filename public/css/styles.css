@@ -141,12 +141,10 @@ div.beta > p {
     background-color: yellow;
 }
 
-
-
 .col-xs-12.btn_bottom {
     position: absolute;
     right: 1em;
-    top: 9em;
+    bottom: 1em;
     z-index: 99;
 }
 
