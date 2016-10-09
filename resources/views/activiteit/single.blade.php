@@ -57,7 +57,7 @@
                             {{ Form::label('aanwezig', "Aanwezig :") }}
 
                             {{--Hidden is een truukje om de lege waarde op te slaan--}}
-                            {!! Form::hidden('aanwezig', '1', false) !!}
+                            {!! Form::hidden('aanwezig', '0', false) !!}
                             {!! Form::checkbox('aanwezig', '1', true, array('data-toggle' => 'toggle', 'data-on' => 'Ja', 'data-off' => 'Nee')) !!}
                         </div>
                     </div>
