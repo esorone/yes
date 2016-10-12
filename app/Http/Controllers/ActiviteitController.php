@@ -32,7 +32,7 @@ class ActiviteitController extends Controller
 
          $aantallen = DB::table('comments')
              ->where('post_id', $id)
-             ->where('aanwezig', 1)
+             ->where('aanwezig', "A")
              ->count(DB::raw('DISTINCT user_id'));
 
          // return the view and pass in the post object
