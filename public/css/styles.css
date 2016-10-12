@@ -2538,9 +2538,9 @@ i.battery{
         width: 79.5px!important;
         height: 55px;
     }
-    .glyphicon {
+  /*  .glyphicon {
         left: -71px;
-    }
+    }*/
     .glyphicon2 {
         right: -76px;
     }
