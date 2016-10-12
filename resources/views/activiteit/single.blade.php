@@ -39,11 +39,13 @@
                             </div>
                             <div class="panel-body">
                                 {{ $comment->comment }}
+                                @if(Auth::user()->id == $comment->user_id) 
                                 <div class="row">
                                     <div class="text-right col-md-offset-9"><a href="{{ route('comments.edit', $comment->id) }}"
                                                                                class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
                                         <a href="{{ route('comments.delete', $comment->id) }}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span></a></div>
                                 </div>
+                                @endif
 
                             </div><!-- /panel-body -->
                         </div><!-- /panel panel-default -->

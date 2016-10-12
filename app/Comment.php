@@ -16,6 +16,11 @@ class Comment extends Model
     {
         return $this->belongsTo('App\User');
     }
+    //Om eigen post te kunnen editten
+     public function isTheOwner($user)
+  {
+    return $this->user_id === $user->id;
+  }
 
 
 }

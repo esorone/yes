@@ -36,8 +36,8 @@ class ActiviteitController extends Controller
              ->count(DB::raw('DISTINCT user_id'));
 
          // return the view and pass in the post object
+         
          return view('activiteit.single')->withPost($post)->withAantallen($aantallen);
-
         
     }
 

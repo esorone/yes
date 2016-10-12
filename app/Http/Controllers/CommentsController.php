@@ -92,6 +92,7 @@ class CommentsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
+
     {
         $user= auth()->id();
         $comment = Comment::find($id);
@@ -145,5 +146,19 @@ class CommentsController extends Controller
         Session::flash('success', 'Reactie is verwijderd');
         return redirect()->route('activiteit.single', $post_id);
     }
+
+     public function getEdit($id)
+  {
+    // 1st # Fetch the post with something like this:
+    $comment      = $this->comment->findOrFail($id); // maybe this will not work for you, try to implement your own method here
+
+    // 2nd # Here is how you do the trick
+    // validate that the user updating the post is the post author:
+    if ( ! $comment->isTheOwner(Auth::user())) return \Redirect::to('/');
+
+    // 3rd # Return the view with the post array
+
+  }
+
 }
 
